@@ -1,110 +1,30 @@
-<!-- Dedicated Only For Asus Laptop with 1980 x 1080 resolution -->
-<!-- By Farino-->
+<!-- Temporary -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wall</title>
-
-    <link rel="stylesheet" href="Assets/style.css">
+    <title>Oniraf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="startTime()">
-    <div class="canvas">
-        <div class="c-glow"></div>
-        <div class="r-glow-b"></div>
-        <div class="r-glow-w"></div>
+<body>
+    <!-- Make Element Inside Centered-->
+    <div class="center-box">
+        <div class="photo">
+            <div class="back-name z1">ONIRAF</div>
+            <div class="img-photo z2 "></div>
+            <div class="front-name z3">ONIRAF</div>
+        </div>
+        <div class="social-bar">
+            <ul>
+                <li><button><i class="fa fa-facebook"></i></button></li>
+                <li><button><i class="fa fa-instagram"></i></button></li>
+                <li><button><i class="fa fa-whatsapp"></i></button></li>
+                <li><button><i class="fa fa-envelope"></i></button></li>
+            </ul>
+        </div>
     </div>
-    <div class="scene" id="scene">
-        <div class="cbg"></div>
-        <div class="digi" id="digis">
-            <span id="digi">0:00:00</span>
-        </div>
-        <span class="digiline" id="dl"></span>
-        <div class="clock center" >
-            <div class="centerclock">
-                <img src="Assets/Image/centerclock.png" alt="" onmouseover="digital()" onmouseout="digitalOut()">
-            </div>
-            <div class="hour" id="hr">
-                <img src="Assets/Image/hours.png" alt="">
-            </div>
-            <div class="min" id="min">
-                <img src="Assets/Image/min.png" alt="">
-            </div>
-            <div class="sec" id="sec">
-                <img src="Assets/Image/minutes.png" alt="">
-            </div>
-        </div>
-        <div class="hero">
-            <span id="month">Feb</span>/<span id="day">Monday</span> 
-        </div>
-    
-        <div class="hero right">
-            MMXXIV
-        </div>
-        <label class="switch dmode active">
-            <input type="checkbox" onclick="lmode()">
-            <span class="slider round"></span>
-          </label>
-    </div>
-    
-    <script>
-        function lmode(){
-            let scene = document.getElementById('scene');
-            scene.classList.toggle('lightscene');
-        };
-
-    setInterval(() => {
-    d = new Date(); //object of date()
-    day = d.getDay();
-    month = d.getMonth();
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec",]
-    let dname = days[day];
-    let mname = months[month];
-    hr = d.getHours();
-    min = d.getMinutes();
-    sec = d.getSeconds();
-    let minute = document.getElementById('min');
-    let hour = document.getElementById('hr');
-    let second = document.getElementById('sec')
-    hr_rotation = 30 * hr + min / 2; //converting current time
-    min_rotation = 6 * min;
-    sec_rotation = 6 * sec;
-    min = checkTime(min);
-    sec = checkTime(sec);
- 
-    document.getElementById('digi').innerHTML =  hr + ":" + min + ":" + sec;
-    document.getElementById('day').innerHTML = dname;
-    document.getElementById('month').innerHTML = mname
-    minute.style.transform = `translate(-50%, -50%) rotate(${min_rotation}deg)`;
-    hour.style.transform = `translate(-50%, -50%) rotate(${hr_rotation}deg)`;
-    second.style.transform = `translate(-50%, -50%) rotate(${sec_rotation}deg)`;
-}, 1000);
-
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
-
-function digital(){
-    let dl = document.getElementById('dl');
-    let digi = document.getElementById('digis');
-    let cdl = dl.classList.toggle('dlactive');
-    digi.style.opacity = "100%";
-    digi.style.transitionDelay = "1.2s";
-};
-
-function digitalOut(){
-    let dl = document.getElementById('dl');
-    let digi = document.getElementById('digis');
-    dl.classList.toggle('dlactive');
-    digi.style.opacity = "0";
-    digi.style.transitionDelay = ".4s";
-};
-
-
-    </script>
 </body>
 </html>
