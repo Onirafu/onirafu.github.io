@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onirafu</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+    <div class="loader" id="loader">
+        <div class="window-box" id="loader-box">
+            <div class="window-header">
+                <button class="btn-wbox fa fa-dash disabled"></button>
+                <button class="btn-wbox fa-regular fa-square disabled"></button>
+                <button class="btn-wbox fa fa-xmark-large disabled"></button>
+            </div>
+            <div class="window-body p-4 w-dark w-box-sm">
+                <div class="fw-bold mb-3">Onirafu Profile Web 1.0</div>
+                <span id="demo"></span><span id="unscore">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Page-->
+
+    <div id="main">
+
+        <div class="containers slideDown" id="main-content">
+            <div class="resize-480">
+                <div id="logo">
+                    <div class="layer z1">
+                        <img src="img/logo.svg" alt="Kul logo" draggable="false">
+                    </div>
+                    <div class="layer z2" data-depth="0.1"><span class="ring"></span></div>
+                    <div class="layer z3" data-depth="0.1"><span class="ring"></span></div>
+                    <div class="layer z4" data-depth="0.2"><span class="ring"></span></div>
+                    <div class="layer z5" data-depth="0.2"><span class="ring"></span></div>
+                    <div class="layer z6" data-depth="0.3"><span class="ring"></span></div>
+                    <div class="layer z7" data-depth="0.3"><span class="ring"></span></div>
+                    <div class="layer z8" data-depth="0.4"><span class="ring"></span></div>
+                    <div class="layer z9" data-depth="0.4"><span class="ring"></span></div>
+                    <div class="layer z10" data-depth="0.5"><span class="ring"></span></div>
+                    <div class="layer z11" data-depth="0.5"><span class="ring"></span></div>
+                </div>
+            </div>
+            <ul class="btn-group" style="z-index: 1000;">
+                <li><a href="#" class="btn-link" onclick="openBox('about-box')">About</a></li>
+                <li><span></span></li>
+                <li><a href="#" class="btn-link" onclick="openBox('shit-box')">Works</a></li>
+                <li><span></span></li>
+                <li><a href="#" class="btn-link" onclick="openBox('nah-box')">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer slideUp" id="main-footer">
+            <span class="footer-img">
+                <img src="img/footerleft.png" alt="" draggable="false">
+            </span>
+            <span class="footer-img">
+                <img src="img/footerright.png" alt="" draggable="false">
+            </span>
+            <div class="footer-text"><text>Made With Heart © 2024</text></div>
+        </div>
+    </div>
+
+    <!-- Pop uP Section -->
+
+    <div id="wboxes">
+        <div class="window-box" id="about-box">
+            <div class="window-header">
+                <button class="btn-wbox fa-solid fa-dash "></button>
+                <button class="btn-wbox fa-solid fa-square btn-full"></button>
+                <button class="btn-wbox fa-solid fa-xmark-large box-close"></button>
+            </div>
+            <div class="window-body p-4 w-dark w-box-sm text-center" id="aboutBox">
+                <!-- Imported From Partials Folder -->
+            </div>
+        </div>
+        <div class="window-box" id="shit-box">
+            <div class="window-header">
+                <button class="btn-wbox fa-solid fa-dash "></button>
+                <button class="btn-wbox fa-solid fa-square btn-full"></button>
+                <button class="btn-wbox fa-solid fa-xmark-large box-close"></button>
+            </div>
+            <div class="window-body p-4 w-dark w-box-sm text-center" id="workBox">
+                <!-- Imported From Partials Folder -->
+            </div>
+            <div class="window-box" id="nah-box">
+                <div class="window-header">
+                    <button class="btn-wbox fa-solid fa-dash "></button>
+                    <button class="btn-wbox fa-solid fa-square btn-full"></button>
+                    <button class="btn-wbox fa-solid fa-xmark-large box-close"></button>
+                </div>
+                <div class="window-body p-4 w-dark w-box-sm text-center" id="contactBox">
+                    <!-- Imported From Partials Folder -->
+                </div>
+        </div>
+    </div>
+
+
+    <!-- No Script Website -->
+    <noscript>
+        <div class="window-box w-50 w-box-sm">
+            <div class="window-header">
+                <button class="btn btn-circle btn-danger disabled"></button>
+                <button class="btn btn-circle btn-warning disabled"></button>
+                <button class="btn btn-circle btn-success disabled"></button>
+            </div>
+            <div class="window-body p-4">
+                <div class="fw-bold mb-3">Onirafu Profile Web 1.0</div>
+                <span class="text-secondary">Failed To Load <b class="text-white">onirafu.github.io</b>, Javascript is
+                    Disabled!</span>
+                <br>
+                <span class="text-secondary">Don't Worry! there is no harm Script Here!</span>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- JS Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <script src="js/anim.js"></script>
+
+</body>
+
+</html>

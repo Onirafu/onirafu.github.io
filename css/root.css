@@ -1,0 +1,150 @@
+/* Plugins */
+@import url('https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Color Root */
+:root{
+    --light: #F8F9FA;
+    --primary: #FF204E;
+    --secondary: #A0153E;
+    --dp: #5D0E41;
+    --dark: #000C1B;
+    --ds: #00224D;
+}
+
+._bg-dark{
+    background-color: var(--dark);
+}
+
+._bg-ds{
+    background-color: var(--ds);
+}
+
+._bg-primary{
+    background-color: var(--primary);
+}
+
+._bg-light{
+    background-color: var(--light);
+}
+
+._text-dark{
+    color: var(--dark) !important;
+}
+
+._tex-light{
+    color: var(--light);
+}
+
+/* App Window box style*/
+
+.window-box{
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px #00000051;
+    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 2.5px;
+    outline: none;
+    overflow: hidden;
+
+    &.fullscreen{
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+}
+
+/* Global Shadow */
+
+.gsh{
+    box-shadow: 0 0 15px #00000051;
+}
+
+.window-box .window-header{
+    z-index: 3;
+    cursor: pointer;
+    background-color: var(--ds);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+
+    .btn-wbox{
+        width: 30px;
+        height: 30px;
+        color: #00142f;
+        font-size: 11px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .btn-wbox:hover{
+        background-color: #00439a;
+    }
+
+    .btn-wbox:active{
+        background-color: var(--primary);
+        color: var(--secondary);
+    }
+}
+
+.window-box .window-body{
+    padding: 10px 15px;
+    min-width: fit-content;
+    height: 100%;
+    width: 100%;
+    margin-top: -1px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 0.5em;
+        height: 0.5em;
+       }
+     
+       &::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,.1);
+        border-radius: 3px;
+     
+        &:hover {
+         background: rgba(255,255,255,.2);
+        }
+       }
+}
+
+.w-dark{
+    background-color: #00142f;
+    color: #fff;
+}
+
+.w-light{
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+/* Custom ScrollBar */
+
+/* Custom BreakPoint */
+
+@media screen and (max-width: 576px){
+    /* .w-box-sm{
+        width: 250px !important;
+    }     */
+}
+
+@media screen and (max-height: 480px){
+    .btn-group{
+        margin-top: -90px !important;
+    }
+
+    .resize-480{
+        transform: scale(0.7) translateY(-80px); 
+    }
+
+    .footer-text{
+        font-size: 5px !important;
+    }
+}
+
+/* Custom Fa Style */
